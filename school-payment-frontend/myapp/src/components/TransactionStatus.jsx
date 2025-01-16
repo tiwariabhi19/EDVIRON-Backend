@@ -17,7 +17,7 @@ const TransactionStatus = () => {
     setError('');
     
     try {
-      const response = await axios.get(`http://localhost:4000/transactions/status/${customOrderId}`);
+      const response = await axios.get(`https://edviron-backend-l8n8.onrender.com/transactions/status/${customOrderId}`);
       setStatus(response.data);
     } catch (err) {
       setError(`Error fetching status: ${err.message}`);

@@ -9,7 +9,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/transactions');
+        const response = await axios.get('https://edviron-backend-l8n8.onrender.com/transactions');
         setTransactions(response.data);
       } catch (err) {
         setError(`Error fetching transactions: ${err.message}`);
