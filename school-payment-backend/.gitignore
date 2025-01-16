@@ -22,11 +22,6 @@ build/
 dist/
 out/
 
-# Miscellaneous
-*.bak
-*.tmp
-*.swp
-
 # MongoDB data files (if running locally, but typically don’t track)
 *.mongodb
 
