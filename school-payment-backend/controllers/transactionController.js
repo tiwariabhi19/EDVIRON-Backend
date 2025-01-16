@@ -6,6 +6,7 @@ exports.getAllTransactions = async (req, res) => {
     const transactions = await Transaction.find();
     res.json(transactions);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -17,6 +18,7 @@ exports.getTransactionsBySchool = async (req, res) => {
     const transactions = await Transaction.find({ school_id });
     res.json(transactions);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -29,6 +31,7 @@ exports.getTransactionStatus = async (req, res) => {
     if (!transaction) return res.status(404).json({ message: "Transaction not found" });
     res.json(transaction);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -42,6 +45,7 @@ exports.updateTransactionStatus = async (req, res) => {
     if (!transaction) return res.status(404).json({ message: "Transaction not found" });
     res.json(transaction);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Server error" });
   }
 };
